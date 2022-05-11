@@ -189,13 +189,12 @@ Module.register("MMM-wiki",{
         wrapper.style.margin = this.config.margin;
         wrapper.style.fontSize= this.config.fontSize;
         wrapper.style.lineHeight= this.config.lineHeight;
-        return wrapper;
-    },
-
-    start: function() {
+        
         var self = this;
-        setInterval(function() {
+        setTimeout(function() {
             self.updateDom(500);
         }, self.config.updateInterval);
+        
+        return wrapper;
     },
 });
